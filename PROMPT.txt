@@ -1,0 +1,28 @@
+You are implementing GitHub issue #1 for theurbandev/health-assistant.
+Run ID: 20260814234324
+
+## Issue title
+Add a health_assistant.cli module with a tips command
+
+## Issue body / task description
+## Task
+Add a small CLI to the health-assistant package: `python3 -m health_assistant.cli tips` prints the daily health tip.
+
+## Acceptance criteria
+- [ ] New module `health_assistant/cli.py` with a `tips` subcommand via argparse
+- [ ] `python3 -m health_assistant.cli tips` prints a non-empty health tip
+- [ ] Unit tests for the CLI in `tests/test_cli.py`
+- [ ] Full test suite passes: `python3 -m unittest discover -s tests -q`
+
+## Constraints
+- Stdlib only (argparse, unittest). No new dependencies.
+- Follow AGENTS.md conventions.
+
+
+## Repository instructions
+Read and follow AGENTS.md (and any other repo instruction files) in the repository root.
+
+## Task
+Implement the issue. Follow the acceptance criteria in the issue body. Make focused, minimal, idiomatic changes. After implementing, run the project's tests and linters; fix anything you broke. Report what you changed and the test/lint results.
+
+When done, summarize the outcome in a short final message.
