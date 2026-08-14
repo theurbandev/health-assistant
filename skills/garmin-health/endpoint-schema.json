@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Garmin health endpoint request",
+  "type": "object",
+  "properties": {
+    "endpoint": {
+      "type": "string",
+      "enum": [
+        "daily_health",
+        "heart_rate",
+        "sleep",
+        "activities",
+        "body_composition",
+        "sync_status"
+      ]
+    },
+    "start": {"type": ["string", "null"], "description": "ISO-8601 start timestamp"},
+    "end": {"type": ["string", "null"], "description": "ISO-8601 end timestamp"},
+    "limit": {"type": "integer", "minimum": 1, "maximum": 500, "default": 100}
+  },
+  "required": ["endpoint"],
+  "additionalProperties": false
+}
+
