@@ -1,3 +1,5 @@
+TESTING AUTOMATION
+
 # Health Assistant
 
 AI-assisted personal health tracking and insights.
