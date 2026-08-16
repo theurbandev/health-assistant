@@ -2,3 +2,10 @@ __pycache__/
 *.pyc
 PROMPT.txt
 .venv/
+*.db
+*.sqlite
+*.sqlite3
+data/
+cache/
+backups/
+*.egg-info/
