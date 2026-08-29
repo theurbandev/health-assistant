@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "health-assistant"
+version = "0.1.0"
+description = "Private Telegram health assistant backed by Garmin data"
+requires-python = ">=3.12"
+dependencies = [
+    # FastAPI and these integration clients are required by the requested backend and external APIs.
+    "fastapi>=0.115,<1",
+    "httpx>=0.28,<1",
+    "openai>=1.68,<2",
+    "pydantic-settings>=2.8,<3",
+    "uvicorn[standard]>=0.34,<1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3,<9",
+    "pytest-asyncio>=0.25,<1",
+    "ruff>=0.11,<1",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.setuptools.packages.find]
+include = ["app*", "health_assistant*"]
